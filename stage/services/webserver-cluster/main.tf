@@ -3,7 +3,8 @@ provider "aws" {
 }
 
 module "webserver_cluster" {
-  source = "git::git@github.com:jspharenas/terraform-up-running-2-modules.git//services/webserver-cluster?ref=v0.0.1"
+  source = "../../../../modules/services/webserver-cluster"
+  #source = "git::git@github.com:jspharenas/terraform-up-running-2-modules.git//services/webserver-cluster?ref=v0.0.2"
 
   cluster_name = "webservers-stage"
   db_remote_state_bucket = "f0084r-terraform-up-running-remote-state"
